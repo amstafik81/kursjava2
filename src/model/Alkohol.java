@@ -19,5 +19,10 @@ public class Alkohol extends Produkt {
     public String getTyp(){
        return "alko";
     }
-
+    @Override
+    public String toString(){
+       return super.toString()+"\t"+
+               this.litraz+"\t"+
+               this.procent;
+    }
 }

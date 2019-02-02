@@ -17,5 +17,10 @@ public class Papierosy extends Produkt{
     public String getTyp(){
         return "pap";
     }
-
+    @Override
+    public String toString(){
+        return super.toString()+"\t"+
+                this.rodzaj+"\t"
+                +this.ilosc;
+    }
 }

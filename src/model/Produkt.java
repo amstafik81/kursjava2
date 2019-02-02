@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 public abstract class  Produkt {
 
 
-    private String nazwa;
-    private BigDecimal cena;
-    private int id;
+    protected String nazwa;
+    protected BigDecimal cena;
+    protected int id;
     private static int generator=1;
     public Produkt(String nazwa, BigDecimal cena) {
         this.nazwa = nazwa;
