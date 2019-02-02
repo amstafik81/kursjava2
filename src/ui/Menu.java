@@ -30,7 +30,6 @@ public class Menu {
                   default:
                       System.out.println("Błędna opcja, spróbuj jeszcze raz");
               }
-
        } while (!wybor.equals("q"));
 
     }
