@@ -16,6 +16,7 @@ public class Menu {
        System.out.println("3-wyświetl alko");
        System.out.println("q-wyjscie");
        boolean spr=true;
+
        String wybor;
        do {
            System.out.println("Podaj wybór");
@@ -37,10 +38,13 @@ public class Menu {
                       break;
                   case "2":
                       System.out.println("Odejmowanie produktu");
+                      System.out.println("Podaj id usuwanego produktu:");
+                      int id=wejscie.nextInt();
+                      sklep.usunAlkohol(id);
                       break;
                   case "3":
                       System.out.println("Wyswietlenie produktów");
-                      sklep.wyswietlAlkohol();
+                      System.out.println(sklep);
                       break;
                   case "q":
                       System.out.println("Bye Bye");

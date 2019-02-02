@@ -22,6 +22,6 @@ public class Alkohol {
     }
     @Override
     public String toString(){
-       return this.nazwa+" cena:"+this.cena+" litraż:"+this.litraz;
+       return this.id+"\t"+this.nazwa+"\t"+this.cena+"\t"+this.litraz;
     }
 }

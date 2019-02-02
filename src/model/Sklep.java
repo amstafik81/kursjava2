@@ -27,11 +27,17 @@ public class Sklep {
 
         }
     }
-    public void wyswietlAlkohol(){
-        for(Alkohol i:alkohole){
-            System.out.println(i);
+  //  public void wyswietlAlkohol(){
+    //    for(Alkohol i:alkohole){
+     //       System.out.println(i);
+     //   }
+   // }
+    public String toString(){
+        String rezultat="ID\tNazwa\tCena\tLitraż\n";
+        for(Alkohol alkohol:alkohole){
+
+            rezultat+=alkohol+"\n";
         }
-
-
+        return rezultat;
     }
 }
