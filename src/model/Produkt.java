@@ -2,7 +2,7 @@ package model;
 
 import java.math.BigDecimal;
 
-public class Produkt {
+public abstract class  Produkt {
 
 
     private String nazwa;
@@ -17,8 +17,9 @@ public class Produkt {
     public int getId(){
         return id;
     }
+    public abstract String getTyp();
     @Override
     public String toString(){
-        return this.id+"\t"+this.nazwa+"\t"+this.cena+"\t";
+        return this.id+"\t"+getTyp()+"\t"+this.nazwa+"\t"+this.cena+"\t";
     }
 }

@@ -12,53 +12,34 @@ public class Sklep {
 
     public Sklep(String nazwa) {
         this.nazwa = nazwa;
-        this.alkohole=new ArrayList<>();
-        this.papieros=new ArrayList<>();
-    }
-
-   public void dodajAlkohol(Alkohol alkohol){
-        alkohole.add(alkohol);
+        this.produkty=new ArrayList<>();
 
     }
-    public void dodajPapierosy(Papierosy papierosy){
-        papieros.add(papierosy);
+
+   public void dodaj(Produkt produkt){
+        produkty.add(produkt);
 
     }
-    public void usunAlkohol(int id){
-        Iterator<Alkohol> iterator=alkohole.iterator();
+
+    public void usun(int id){
+        Iterator<Produkt> iterator=produkty.iterator();
         while (iterator.hasNext()){
-            Alkohol alkohol=iterator.next();
-            if(alkohol.getId()==id){
+            Produkt produkt=iterator.next();
+            if(produkt.getId()==id){
                 iterator.remove();
             }
 
         }
     }
-    public void usunPapierosy(int id){
-        Iterator<Papierosy> iterator=papieros.iterator();
-        while (iterator.hasNext()){
-            Papierosy papieros=iterator.next();
-            if(papieros.getId()==id){
-                iterator.remove();
-            }
 
-        }
-    }
-  //  public void wyswietlAlkohol(){
-    //    for(Alkohol i:alkohole){
-     //       System.out.println(i);
-     //   }
-   // }
+
     public String toString(){
         String rezultat="ID\tNazwa\tCena\n";
-        for(Alkohol alkohol:alkohole){
+        for(Produkt produkt:produkty){
 
-            rezultat+=alkohol+"\n";
+            rezultat+=produkt+"\n";
         }
-        for(Papierosy papieros:papieros){
 
-            rezultat+=papieros+"\n";
-        }
         return rezultat;
     }
 }

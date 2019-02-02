@@ -15,4 +15,9 @@ public class Alkohol extends Produkt {
         this.procent=procent;
     }
 
+    @Override
+    public String getTyp(){
+       return "alko";
+    }
+
 }

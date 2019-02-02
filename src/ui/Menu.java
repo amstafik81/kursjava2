@@ -14,12 +14,12 @@ public class Menu {
        Sklep sklep=new Sklep("Tesco");
        System.out.println("1-dodaj alkohol");
        System.out.println("2-dodaj papierosy");
-       System.out.println("3-usuń alkohol");
-       System.out.println("4-usuń papierosy");
-       System.out.println("5-wyświetl alko");
+       System.out.println("3-usuń ");
+       System.out.println("4-wyświetl ");
        System.out.println("q-wyjscie");
        boolean spr=true;
-
+        sklep.dodaj(new Alkohol("Alko1",BigDecimal.TEN,"20","20"));
+        sklep.dodaj(new Papierosy("d",2,"papa",BigDecimal.TEN));
        String wybor;
        do {
            System.out.println("Podaj wybór");
@@ -37,7 +37,7 @@ public class Menu {
                       System.out.println("Podaj procent:");
                       String procent = wejscie.nextLine();
                       Alkohol alko = new Alkohol(nazwa, cena, litraz, procent);
-                      sklep.dodajAlkohol(alko);
+                      sklep.dodaj(alko);
                       break;
                   }
                   case "2":{
@@ -52,8 +52,8 @@ public class Menu {
                       BigDecimal cena = wejscie.nextBigDecimal();
                       wejscie.nextLine();
 
-                      Papierosy pap = new Papierosy(rodzaj,ilosc,nazwa,cena);
-                      sklep.dodajPapierosy(pap);
+                      Papierosy papie = new Papierosy(rodzaj,ilosc,nazwa,cena);
+                      sklep.dodaj(pap);
                       break;
                   }
 
@@ -61,7 +61,7 @@ public class Menu {
                           System.out.println("Odejmowanie produktu");
                           System.out.println("Podaj id usuwanego produktu:");
                           int id = wejscie.nextInt();
-                          sklep.usunAlkohol(id);
+                          sklep.usun(id);
                           break;
                       }
                   case "4": {
