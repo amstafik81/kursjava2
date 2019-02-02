@@ -13,6 +13,9 @@ public class Papierosy extends Produkt{
         this.ilosc = ilosc;
 
     }
-
+    @Override
+    public String getTyp(){
+        return "pap";
+    }
 
 }

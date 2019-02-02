@@ -53,7 +53,7 @@ public class Menu {
                       wejscie.nextLine();
 
                       Papierosy papie = new Papierosy(rodzaj,ilosc,nazwa,cena);
-                      sklep.dodaj(pap);
+                      sklep.dodaj(papie);
                       break;
                   }
 
