@@ -1,5 +1,6 @@
 package ui;
 
+import io.PlikiBinarne;
 import model.Alkohol;
 import model.Papierosy;
 import model.Sklep;
@@ -11,15 +12,26 @@ import java.util.logging.SocketHandler;
 public class Menu {
    public  void wyswietl(){
        Scanner wejscie=new Scanner(System.in);
-       Sklep sklep=new Sklep("Tesco");
+      // Sklep sklep=new Sklep("Tesco");
+       Sklep sklep=null;
+       PlikiBinarne plikiBinarne=new PlikiBinarne();
+       try {
+           sklep = plikiBinarne.odczyt();
+       }
+       catch (Exception e){
+           e.printStackTrace();
+           System.out.println("Nie udało sie wczytac sklepu");
+           sklep=new Sklep("Tesco");
+       }
        System.out.println("1-dodaj alkohol");
        System.out.println("2-dodaj papierosy");
        System.out.println("3-usuń ");
        System.out.println("4-wyświetl ");
+
        System.out.println("q-wyjscie");
        boolean spr=true;
-        sklep.dodaj(new Alkohol("Alko1",BigDecimal.TEN,"20","20"));
-        sklep.dodaj(new Papierosy("d",2,"papa",BigDecimal.TEN));
+       // sklep.dodaj(new Alkohol("Alko1",BigDecimal.TEN,"20","20"));
+        //sklep.dodaj(new Papierosy("d",2,"papa",BigDecimal.TEN));
        String wybor;
        do {
            System.out.println("Podaj wybór");
@@ -67,10 +79,14 @@ public class Menu {
                   case "4": {
                       System.out.println("Wyswietlenie produktów");
                       System.out.println(sklep);
+
+
                       break;
                   }
                   case "q": {
                       System.out.println("Bye Bye");
+
+                      plikiBinarne.zapis(sklep);
                       break;
                   }
                   default: {

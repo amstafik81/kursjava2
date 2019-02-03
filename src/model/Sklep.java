@@ -1,10 +1,12 @@
 package model;
 
+import java.awt.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Sklep {
+public class Sklep implements Serializable {
 
 
     private String nazwa;
