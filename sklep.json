@@ -6,7 +6,13 @@
     "cena" : 3,
     "id" : 1,
     "litraz" : "4",
-    "procent" : "3",
-    "typ" : "alko"
+    "procent" : "3"
+  }, {
+    "type" : "alkohol",
+    "nazwa" : "ddddddd",
+    "cena" : 2,
+    "id" : 1,
+    "litraz" : "3",
+    "procent" : "4"
   } ]
 }

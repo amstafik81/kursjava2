@@ -5,7 +5,7 @@ import model.Sklep;
 
 import java.io.*;
 
-public class PlikiBinarne {
+public class PlikiBinarne implements OperacjePlikowe{
     public void zapis(Sklep sklep){
         try {
             FileOutputStream fileOutputStream = new FileOutputStream("sklep.bin");

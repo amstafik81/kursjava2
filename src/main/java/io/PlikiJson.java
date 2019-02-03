@@ -5,7 +5,7 @@ import model.Sklep;
 
 import java.io.File;
 
-public class PlikiJson {
+public class PlikiJson implements OperacjePlikowe{
     private ObjectMapper mapper=new ObjectMapper();
     Sklep sklep;
     public void zapis(Sklep sklep) {

@@ -61,6 +61,6 @@ public class Sklep implements Serializable {
         return rezultat;
     }
     public Sklep(){
-
     }
+
 }
