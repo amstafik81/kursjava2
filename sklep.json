@@ -1,0 +1,12 @@
+{
+  "nazwa" : "Tesco",
+  "produkty" : [ {
+    "type" : "alkohol",
+    "nazwa" : "fff",
+    "cena" : 3,
+    "id" : 1,
+    "litraz" : "4",
+    "procent" : "3",
+    "typ" : "alko"
+  } ]
+}
